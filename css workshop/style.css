@@ -1,0 +1,61 @@
+/*styling our html pages/*
+/* tag name or id or class name{
+    property:value;
+}
+*/
+
+body {
+    background-image: url("ipl.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#one {
+    color: red;
+    text-align: center;
+}
+#two{
+    color: rgb(83, 0, 94);
+    text-align: center;
+
+}
+
+div {
+    color: gold;
+    border-style: dashed;
+    background-color: blue;
+
+    border-color: gold;
+    border-width: 5px;
+    width: 30%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#csk {
+    color: black;
+    border-style: dashed;
+    background-color: yellow;
+    border-color: black;
+    border-width: 5px;
+    width: 30%;
+    margin: auto;
+}
+
+.team {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#kx1 {
+    background-color: rgba(133, 34, 34, 0.8);
+    color: white;
+}
+#rcb {
+    background-color: red;
+    color: white;
+}
+li {
+    margin-left: 40%;
+}
+div h3{
+    text-align: center;
+}
