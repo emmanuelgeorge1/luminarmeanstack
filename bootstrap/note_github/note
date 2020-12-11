@@ -15,4 +15,6 @@ command for initialize:= git init
 
 command for listing and untracked file:= git status
 
-command for adding all untracked file to stageing area:= git add -A
+command for adding all untracked file to stageing area:= git add -A (-A means all file if only one file then just type its filename not need of symbol " - ")
+
+command for adding file to local repository:= git commit -m"my first repository"
