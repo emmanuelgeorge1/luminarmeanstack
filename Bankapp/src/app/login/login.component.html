@@ -1,0 +1,29 @@
+<form [formGroup]="loginForm" (ngSubmit)="Login()">
+<div class="container">
+
+    <div class="main">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8"><h1>E-Bank Login</h1>{{temp}}
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Account Number</label>
+            <input type="text"formControlName="acc" name="acc"  class="form-control" id="acc" aria-describedby="emailHelp">
+           <div *ngIf="(this.loginForm.get('acc')?.touched||this.loginForm.get('acc')?.dirty)&&this.loginForm.get('acc')?.errors" class="errors" >Invalid Account Number</div> 
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password"formControlName="pass" name="pass" class="form-control" id="pwd">
+            <div *ngIf="(this.loginForm.get('pass')?.touched||this.loginForm.get('pass')?.dirty)&&this.loginForm.get('pass')?.errors" class="errors" >Invalid Password</div>
+        </div>
+       
+        <button type="submit" class="btn btn-primary">Login</button>
+        <a routerLink ="registration"class="btn btn-primary">Register</a>
+  
+  
+    </div>
+  
+  </div>
+</form>

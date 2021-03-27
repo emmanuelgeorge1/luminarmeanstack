@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+    color: rgb(24, 23, 23);
+    background-color: rgb(247, 0, 255);
+
+}
+h3{
+    text-align: justify;
+    color: rgb(11, 90, 165);
+
+}
+.errors{
+    color: rgb(206, 17, 17);
+}

@@ -1,0 +1,73 @@
+<form [formGroup]="depositForm" (ngSubmit)="deposit()">
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8"><h1> Welcome {{this.dataservice.currentUser}} to e-bank </h1></div>
+    <div class="col-2"></div>
+    <div></div>
+</div>
+<div class="container">
+
+    <div class="main">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8"><h3>Deposit</h3></div>
+            <div class="col-2"></div>
+        </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Account Number</label>
+           <input type="text"formControlName="acc" name="acc"  class="form-control" id="acc" aria-describedby="emailHelp">
+            <div *ngIf="(this.depositForm.get('acc')?.touched||this.depositForm.get('acc')?.dirty)&&this.depositForm.get('acc')?.errors" class="errors" >Invalid Account Number</div>
+         
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password"formControlName="pass" name="pass" class="form-control" id="pass">
+            <div *ngIf="(this.depositForm.get('pass')?.touched||this.depositForm.get('pass')?.dirty)&&this.depositForm.get('pass')?.errors" class="errors" >Invalid Password</div>
+
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Amount</label>
+            <input type="text" class="form-control"formControlName="amt" id="amt">
+            <div *ngIf="(this.depositForm.get('amt')?.touched||this.depositForm.get('amt')?.dirty)&&this.depositForm.get('amt')?.errors" class="errors" >Invalid Amount</div>
+        </div>
+       
+        <button type="submit" class="btn btn-primary" >Deposit</button>
+      
+    </div>
+
+</div>
+</form>
+<form [formGroup]="withdrawForm" (ngSubmit)="withdraw()">
+<div class="container">
+<div class="main">
+    <div class="row">
+        <div class="col-2"></div>
+        <br>
+        <div class="col-8"><h3>WithDraw</h3></div>
+        <br>
+        <div class="col-2"></div>
+    </div>
+
+<div class="mb-3">
+  <label for="exampleInputEmail1" class="form-label">Account Number</label>
+ <input type="text"formControlName="acc"name="acc"  class="form-control" id="acc" aria-describedby="emailHelp">
+ <div *ngIf="(this.withdrawForm.get('acc')?.touched||this.withdrawForm.get('acc')?.dirty)&&this.withdrawForm.get('acc')?.errors" class="errors" >Invalid Account Number</div> 
+</div>
+<div class="mb-3">
+  <label for="exampleInputPassword1" class="form-label">Password</label>
+  <input type="password"formControlName="pass"name="pass" class="form-control" id="pwd">
+  <div *ngIf="(this.withdrawForm.get('pass')?.touched||this.withdrawForm.get('pass')?.dirty)&&this.withdrawForm.get('pass')?.errors" class="errors" >Invalid Password</div>
+
+</div>
+<div class="mb-3">
+  <label for="exampleInputPassword1" class="form-label">Amount</label>
+  <input type="text" class="form-control"formControlName="amt" id="amt">
+  <div *ngIf="(this.withdrawForm.get('amt')?.touched||this.withdrawForm.get('amt')?.dirty)&&this.withdrawForm.get('amt')?.errors" class="errors" >Invalid Amount</div>
+</div>
+<div>
+    <button type="submit" class="btn btn-primary">WithDraw</button>
+</div>
+</div>
+</div>
+</form>
+
