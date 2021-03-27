@@ -1,8 +1,8 @@
-var arr = [10, 11, 12, 13, 14, 15, 16, 17]
+var arr = [10, 11, 12, 13, 14, 15, 16, 17,19]
 arr.sort((num1, num2) => num1 - num2)
 var low = 0
 var upp = arr.length - 1
-var ele = 17
+var ele = 18
 var flag = 0
 while (low <= upp) {
     let mid = Math.floor((low + upp) / 2)

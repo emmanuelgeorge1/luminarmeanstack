@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody id="data"></tbody>
+    </table>
+    <button onclick="getPosts()">Fetch All</button>
+</body>
+<script>
+    var request=new XMLHttpRequest()
+    request.open("get","https://jsonplaceholder.typicode.com/posts/1")
+    function getPosts(){
+    request.send()
+    request
+    }
+    request.onreadystatechange=()=>{
+        if(request.readyState==4){
+            if((request.status>=200)&request.status<=300){
+                var result=JSON.parse(request.responseText);
+                console.log(result)
+                var html_data=""
+                html_data=html_data+"<tr> <td>"+result.userId+"</td> <td>"+result.title+"</td> <td>"+result.body+"</td> </tr>"
+                
+                    document.querySelector("#data").innerHTML=html_data
+                
+                
+            }
+            else{
+                alert("failed")
+            }
+        }
+    }
+    
+    //have to pass 2 arguments 
+    //1) method 
+    //2) is url
+    
+    </script>
+</html>

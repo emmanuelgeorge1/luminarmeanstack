@@ -1,0 +1,3 @@
+ng new filename
+to run - ng serve
+to generate a new component - ng g component test
